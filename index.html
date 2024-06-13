@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f2f2f2;
+}
+
+.flex-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.flex-child {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+width: 100%;
+max-width: 400px;
+margin: auto;
+}
+
+.container h1 {
+text-align: center;
+}
+
+.container p {
+text-align: center;
+margin-top: -10px;
+}
+
+.container hr {
+border: 0;
+border-top: 1px solid #ccc;
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
+.container label {
+font-weight: bold;
+}
+
+.container input[type="text"],
+.container input[type="tel"],
+.container input[type="email"],
+.container input[type="number"],
+.container input[type="date"] {
+width: 100%;
+padding: 10px;
+margin: 8px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
+}
+
+.container button {
+width: 100%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.container button:hover {
+background-color: #45a049;
+}
+
+.edit, .delete {
+padding: 8px 12px;
+margin: 0 5px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.edit:hover, .delete:hover {
+background-color: #ddd;
+}
+
+</style>
+<body>
+    <div class="flex-container">
+        <div class="flex-child magenta">
+            <form onsubmit="event.preventDefault(); onFormSubmit();">
+                <div class="container">
+                    <h1 id="heading1">Register Student</h1>
+                    <p id="p1">Please fill this form to create a student record.</p>
+                    <hr>
+                
+                    <label for="studentName"><b>Student Name</b></label>
+                    <input type="text" placeholder="Enter Name" name="studentName" id="studentName" required>
+                
+                    <label for="studentID"><b>Student ID</b></label>
+                    <input type="text" placeholder="Enter ID" name="studentID" id="studentID" required>
+                
+                    <label for="phoneNumber"><b>Phone Number</b></label>
+                    <input type="tel" placeholder="Enter Phone Number" name="phoneNumber" id="phoneNumber" required>
+                
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email" name="email" id="email" required>
+                
+                    <label for="dob"><b>Date of Birth</b></label>
+                    <input type="date" name="dob" id="dob" required>
+                
+                    <label for="branch"><b>Branch</b></label>
+                    <input type="text" placeholder="Enter Branch" name="branch" id="branch" required>
+                
+                    <label for="department"><b>Department</b></label>
+                    <input type="text" placeholder="Enter Department" name="department" id="department" required>
+                
+                    <label for="fees"><b>Fees</b></label>
+                    <input type="number" placeholder="Enter Fees" name="fees" id="fees" required>
+                    <hr>
+                    
+                    <button onclick="submit()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js">
+         function submit() {
+            window.location.href="display.html";
+         }
+    </script>
+</body>
+</html>
